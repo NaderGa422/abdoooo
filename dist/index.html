@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Day Roast & Toast - Abderhaman Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(3deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+        will-change: transform;
+      }
+      
+      @keyframes rainbow-glow {
+        0% { color: #ef4444; text-shadow: 0 0 15px rgba(239, 68, 68, 0.8); }
+        20% { color: #f59e0b; text-shadow: 0 0 15px rgba(245, 158, 11, 0.8); }
+        40% { color: #10b981; text-shadow: 0 0 15px rgba(16, 185, 129, 0.8); }
+        60% { color: #3b82f6; text-shadow: 0 0 15px rgba(59, 130, 246, 0.8); }
+        80% { color: #8b5cf6; text-shadow: 0 0 15px rgba(139, 92, 246, 0.8); }
+        100% { color: #ef4444; text-shadow: 0 0 15px rgba(239, 68, 68, 0.8); }
+      }
+      .animate-rainbow {
+        animation: rainbow-glow 3s linear infinite;
+        will-change: color, text-shadow;
+      }
+
+      @keyframes crazy-shake {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(2px, -2px) rotate(1deg); }
+        50% { transform: translate(-2px, 2px) rotate(-1deg); }
+        75% { transform: translate(2px, 2px) rotate(0.5deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+      .animate-crazy {
+        animation: crazy-shake 0.15s linear infinite;
+        will-change: transform;
+      }
+
+      @keyframes blast-float {
+        0% { transform: translateY(110vh) translateX(0) scale(0.5) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-20vh) translateX(var(--drift)) scale(1.5) rotate(var(--rot)); opacity: 0; }
+      }
+      .animate-blast {
+        animation: blast-float 5s ease-out forwards;
+      }
+
+      @keyframes celebration-pulse {
+        0% { transform: scale(0.5) rotate(-10deg); opacity: 0; filter: blur(10px); }
+        5% { opacity: 1; transform: scale(1.1) rotate(5deg); filter: blur(0px); }
+        15% { transform: scale(1) rotate(0deg); }
+        85% { transform: scale(1.05) rotate(2deg); opacity: 1; filter: blur(0px); }
+        100% { transform: scale(1.5) rotate(0deg); opacity: 0; filter: blur(20px); }
+      }
+      .animate-celebration {
+        animation: celebration-pulse 12s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+      }
+
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .shimmer-text {
+        background: linear-gradient(90deg, #d4af37 0%, #fff9e3 25%, #d4af37 50%, #fff9e3 75%, #d4af37 100%);
+        background-size: 200% auto;
+        animation: shimmer 3s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes slow-rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-slow-rotate {
+        animation: slow-rotate 20s linear infinite;
+      }
+
+      .bg-festive {
+        background: radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 100% 0%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+        background-color: #f8fafc;
+      }
+      .card-texture {
+        background-color: #fffaf0;
+        background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+      }
+      .handwriting {
+        font-family: 'Caveat', cursive;
+      }
+      .script-title {
+        font-family: 'Dancing Script', cursive;
+      }
+    </style>
+    <!-- Shim for process.env to prevent ReferenceError on static sites -->
+    <script>
+      window.process = { 
+        env: { 
+          API_KEY: "" 
+        } 
+      };
+    </script>
+
+<link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-OEMteaj0.js"></script>
+</head>
+<body class="bg-festive min-h-screen">
+    <div id="root"></div>
+</body>
+</html>
